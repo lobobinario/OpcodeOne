@@ -1228,7 +1228,7 @@ Loads from address defined by `%SP` to `%dst1`, then decrements `%SP`.
 | 00000111 | 0001    | xxxx     | xxxx     | ****   |
 
 Example:
-><sub>Pop from stack to %A, then %D to stack.</sub>
+><sub>Pop from stack to %D, decrement %SP, pop from stack to %A, and decrement %SP.</sub>
 >
 >`POP %D %A`
 
@@ -1251,7 +1251,7 @@ Loads from address defined by `%SP` to `%dst1`, then decrements `%SP`.
 | 00000111 | 0010    | xxxx     | xxxx     | xxxx     |
 
 Example:
-><sub>Pop from stack to %C, then %A, then %B.</sub>
+><sub>Pop from stack to %B, then %A, then %C. %SP is decremented after every pop</sub>
 >
 >`POP %B %A %C`
 
